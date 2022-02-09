@@ -31,6 +31,7 @@ public:
     void insert(Type data);  //Adds to the back of the list
     Type peek(int ndx)const ;//Looks at an element at the given ndx value
     void remove(int ndx);    //Removes an element at the given ndx position
+    void pointerPractice(Type, Type);
     friend ostream& operator<< <>(ostream& out, const LinkedList<Type>& list);// Returns an output stream for displaying the LinkedList
 protected:
     int count;
@@ -104,4 +105,39 @@ ostream& operator<< (ostream& out, const LinkedList<Type>& list){
         curr = curr->next;
     }
     return out;
+}
+
+
+
+template<class Type>
+void LinkedList<Type>::pointerPractice(Type toInsert, Type toRemove)
+{
+    int i = 0;
+    auto curr = front;
+    auto newNode = make_shared< Node<Type>>();
+    newNode->data = toInsert;
+    while(i < 2){
+        curr = curr->next;
+        std::cout << curr->data;
+        i++;
+    }
+    newNode->next = curr->next;
+    curr->next= newNode;
+    i = 0;
+    curr = front;
+    auto extra = make_shared<Node<Type>>();
+    std::cout << "hi";
+    //curr->next = newNode;
+    
+    while(curr->data <= 4){
+        curr = curr->next;
+        std::cout << curr->data;
+        //i++;
+    }
+    extra = curr->next;
+    curr -> next = extra->next;
+
+
+    
+    
 }
