@@ -118,7 +118,7 @@ void LinkedList<Type>::pointerPractice(Type toInsert, Type toRemove)
     newNode->data = toInsert;
     while(i < 2){
         curr = curr->next;
-        std::cout << curr->data;
+        //std::cout << curr->data;
         i++;
     }
     newNode->next = curr->next;
@@ -126,12 +126,12 @@ void LinkedList<Type>::pointerPractice(Type toInsert, Type toRemove)
     i = 0;
     curr = front;
     auto extra = make_shared<Node<Type>>();
-    std::cout << "hi";
+    //std::cout << "hi";
     //curr->next = newNode;
     
     while(curr->data <= 4){
         curr = curr->next;
-        std::cout << curr->data;
+        //std::cout << curr->data;
         //i++;
     }
     extra = curr->next;
