@@ -137,7 +137,4 @@ void LinkedList<Type>::pointerPractice(Type toInsert, Type toRemove)
     extra = curr->next;
     curr -> next = extra->next;
 
-
-    
-    
 }
